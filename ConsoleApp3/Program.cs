@@ -80,9 +80,34 @@ namespace ConsoleApp3
     }
     class Poopoo
     {
-        static List Mthhd(List<ListNode> pee, List<ListNode> s)
+        static void Pie(LinkedList<string> pee, LinkedList<string> s)
         {
-            List<ListNode> newlist = pee.AddRange(s);
+            foreach (var n in s)
+            {
+                pee.AddLast(n);
+            }
         } 
+    }
+    class Question4
+    {
+        static bool Q4(string a, string b)
+        {
+            char[] A = a.ToCharArray();
+            Array.Sort(A);
+            char[] B = b.ToCharArray();
+            Array.Sort(B);
+            if (a.Length != b.Length)
+            {
+                return false;
+            }
+            for (int i; i < a.Length - 1;i++)
+            {
+
+            }
+
+
+
+
+        }
     }
 }
