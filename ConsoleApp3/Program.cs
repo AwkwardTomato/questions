@@ -51,7 +51,7 @@ namespace ConsoleApp3
       }
   }
  
-    public class Solution
+    class Solution
     {
         public bool HasCycle(ListNode head)
         {
@@ -77,5 +77,12 @@ namespace ConsoleApp3
             }
 
         }
+    }
+    class Poopoo
+    {
+        static List Mthhd(List<ListNode> pee, List<ListNode> s)
+        {
+            List<ListNode> newlist = pee.AddRange(s);
+        } 
     }
 }
