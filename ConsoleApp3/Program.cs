@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
+
 namespace ConsoleApp3
 {
     class Program
@@ -86,28 +88,48 @@ namespace ConsoleApp3
             {
                 pee.AddLast(n);
             }
-        } 
+        }
     }
     class Question4
     {
-        static bool Q4(string a, string b)
+        static bool Apple(string a, string b)
         {
             char[] A = a.ToCharArray();
             Array.Sort(A);
             char[] B = b.ToCharArray();
             Array.Sort(B);
-            if (a.Length != b.Length)
+            for (int i;  i < a.Length - 1;)
             {
-                return false;
+                if (B[i] == A[i])
+                {
+                    i++;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            for (int i; i < a.Length - 1;i++)
-            {
-
-            }
-
+            return true;
 
 
 
         }
     }
+    class Niff
+    {
+        static void Q5()
+        {
+            Console.WriteLine("First Number x=_");
+            string x = Console.ReadLine();
+            Int32.Parse(x);
+            Console.WriteLine("second Number y=_");
+            string y = Console.ReadLine();
+            Int32.TryParse(y);
+            // x=3 y=2
+            y = x + y;
+            x = y - x;
+            y = y - x;
+        }
+    }
+
 }
