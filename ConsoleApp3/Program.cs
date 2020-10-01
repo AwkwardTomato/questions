@@ -131,5 +131,14 @@ namespace ConsoleApp3
             y = y - x;
         }
     }
+    class Hasio
+    {
+        static void Q6()
+        {
+            //given sum and array find all pairs that equal the sum
+            int[] pee = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 5, 6, 8, 9, 9, 7, 6, 5, 3, 9, 1, 1, 1, 1, 1, 2, 3, 5, 123, 12 };
+
+        }
+    }
 
 }
