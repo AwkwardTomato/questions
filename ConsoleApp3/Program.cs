@@ -5,7 +5,7 @@ using System.Runtime.ExceptionServices;
 
 namespace ConsoleApp3
 {
-    /*class Program
+    class Program
     {
         static void Main()
         {
@@ -42,8 +42,8 @@ namespace ConsoleApp3
         
 
     }
-    
 
+    
   public class ListNode {
       public int val;
       public ListNode next;
@@ -130,7 +130,7 @@ namespace ConsoleApp3
             x = y - x;
             y = y - x;
         }
-    }*/
+    }
     class Hasio
     {
         static void Q6()
@@ -155,5 +155,20 @@ namespace ConsoleApp3
 
         }
     }
+    public class Poggers
+    {
+        public static void Epicness(int n)
+        {
+            List<int> poo = new List<int> { 0, 1 };
+            for (int i = 2; i != n; i++)
+            {
+                int a = poo[i] + poo[i - 1];
+                poo.Add(a);
+
+            }
+            Console.WriteLine(poo[n]);
+        }
+    }
+
 
 }
