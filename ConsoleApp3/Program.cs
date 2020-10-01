@@ -5,7 +5,7 @@ using System.Runtime.ExceptionServices;
 
 namespace ConsoleApp3
 {
-    class Program
+    /*class Program
     {
         static void Main()
         {
@@ -98,7 +98,7 @@ namespace ConsoleApp3
             Array.Sort(A);
             char[] B = b.ToCharArray();
             Array.Sort(B);
-            for (int i;  i < a.Length - 1;)
+             for (int i = 0; i < A.Length - 1; i++ )
             {
                 if (B[i] == A[i])
                 {
@@ -130,13 +130,28 @@ namespace ConsoleApp3
             x = y - x;
             y = y - x;
         }
-    }
+    }*/
     class Hasio
     {
         static void Q6()
         {
             //given sum and array find all pairs that equal the sum
-            int[] pee = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 5, 6, 8, 9, 9, 7, 6, 5, 3, 9, 1, 1, 1, 1, 1, 2, 3, 5, 123, 12 };
+            int[] pee = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 5, 6, 8, 9, 9, 7, 6, 5, 3, 9, 1, 1, 1, 1, 1, 2, 3, 5, 123, 12, -2, 4, -3 };
+            int sum = 4;
+            
+
+            foreach (int a in pee)
+            {
+                 for (int i = 1; i < pee.Length - 1; i++ )
+                {
+                    if (a+i == sum)
+                    {
+                        string pairs = "" + a + "+" + i;
+                    }
+                }
+            }
+
+
 
         }
     }
