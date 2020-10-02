@@ -162,7 +162,6 @@ namespace ConsoleApp3
             return Fib2(n - 1) + Fib2(n - 2);
         }
     }
-
 }
     public class ListNode {
         public int val;
