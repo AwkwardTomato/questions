@@ -29,7 +29,8 @@ namespace ConsoleApp3
                 }
             }
             Console.WriteLine($"{maxCount}, {value}");
-            
+
+            Poggers.Epicness(6);
             //Console.WriteLine(string.Join(",", pee));
 
             //foreach (int p in pee)
@@ -115,6 +116,7 @@ namespace ConsoleApp3
 
         }
     }
+    /*
     class Niff
     {
         static void Q5()
@@ -130,7 +132,7 @@ namespace ConsoleApp3
             x = y - x;
             y = y - x;
         }
-    }
+    }*/
     class Hasio
     {
         static void Q6()
@@ -157,16 +159,22 @@ namespace ConsoleApp3
     }
     public class Poggers
     {
-        public static void Epicness(int n)
+        public static int Epicness(int n)
         {
-            List<int> poo = new List<int> { 0, 1 };
-            for (int i = 2; i != n; i++)
+            int[] poo = new int[n - 1];
+            poo[0] = 0;
+            poo[1] = 1;
+            if (n <= 1)
             {
-                int a = poo[i] + poo[i - 1];
-                poo.Add(a);
-
+            return n;
             }
-            Console.WriteLine(poo[n]);
+            for (int i = 2; i <= n; i++)
+            {
+                int a = poo[i-2] + poo[i - 1];
+                poo[i] = a;
+                
+            }
+            return poo[n];
         }
     }
 
