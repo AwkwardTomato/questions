@@ -120,9 +120,6 @@ namespace ConsoleApp3
                     }
                 }
             }
-
-
-
         }
         //Write a function to count a total number of set bits in a 32 bit Integer? (Solution)
         public static uint SetBitCount(uint i)
@@ -160,6 +157,19 @@ namespace ConsoleApp3
                 return n;
             }
             return Fib2(n - 1) + Fib2(n - 2);
+        }
+        public static string BillGates()
+        {
+            Console.WriteLine("gimme ya change peehead");
+            char[] tyler1 = Console.ReadLine().ToCharArray();
+            foreach (char x in tyler1);
+            {
+                for ( int i = 1 ; i<tyler1.Length - 1; i++)
+                {
+                    string asdj += char[i - 1];
+                }
+            }
+            return tyler1;
         }
     }
 }
