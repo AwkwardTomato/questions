@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleApp3
 {
@@ -166,11 +167,13 @@ namespace ConsoleApp3
             {
                 for ( int i = 1 ; i<tyler1.Length - 1; i++)
                 {
-                    string asdj += char[i - 1];
+                    if (tyler1[x] == tyler1[])
+                    string asdj = $"{tyler1[i - 1]}";
                 }
             }
-            return tyler1;
+            return asdj;
         }
+        public static 
     }
 }
     public class ListNode {
