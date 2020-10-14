@@ -3,6 +3,8 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Runtime.CompilerServices;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ConsoleApp3
 {
@@ -29,9 +31,19 @@ namespace ConsoleApp3
                     value = pee[i];
                 }
             }
-            Console.WriteLine($"{maxCount}, {value}");
-            Console.WriteLine(Fib2(20));
+            Console.WriteLine(Armstrong(371));
         }
+        public class ListNode
+        {
+            public int val;
+            public ListNode next;
+            public ListNode(int x)
+            {
+                val = x;
+                next = null;
+            }
+        }
+
         public bool HasCycle(ListNode head)
         {
             if (head == null)
@@ -88,7 +100,7 @@ namespace ConsoleApp3
         {
             int ReadInt(string prompt)
             {
-                
+
                 int x;
                 do
                 {
@@ -99,11 +111,11 @@ namespace ConsoleApp3
             var x = ReadInt("First Number x=_");
             var y = ReadInt("Second Number y=_");
             y = x + y;
-           x = y - x;
-           y = y - x;
+            x = y - x;
+            y = y - x;
             Console.WriteLine($"{x} {y}");
-         }
-  
+        }
+
         static void Q6()
         {
             //given sum and array find all pairs that equal the sum
@@ -126,7 +138,7 @@ namespace ConsoleApp3
         public static uint SetBitCount(uint i)
         {
             uint poohead = 0;
-            while(i != 0)
+            while (i != 0)
             {
                 poohead += i & 1;
                 i >>= 1;
@@ -159,35 +171,111 @@ namespace ConsoleApp3
             }
             return Fib2(n - 1) + Fib2(n - 2);
         }
-        public static string BillGates()
+        //Write a function to remove duplicate characters from String? (Solution)
+        public static string BillGates(string asdf)
         {
-            Console.WriteLine("gimme ya change peehead");
-            char[] tyler1 = Console.ReadLine().ToCharArray();
-            foreach (char x in tyler1);
+            char[] tyler1 = asdf.ToCharArray();
+            foreach (char x in tyler1)
             {
-                for ( int i = 1 ; i<tyler1.Length - 1; i++)
+                for (int i = 1; i < tyler1.Length - 1; i++)
                 {
-                    if (tyler1[x] == tyler1[])
-                    string asdj = $"{tyler1[i - 1]}";
+                    if (x == tyler1[i])
+                    {
+                        asdf = asdf.Replace($"{tyler1[i]}", "_");
+                    }
                 }
             }
-            return asdj;
+            return asdf;
         }
-        public static 
+        //How to find the 3rd element from end, in a singly linked, in a single pass? (Solution)
+        public static void ThirdFromLast(ListNode baller)
+        {
+            /*if (baller == null)
+            {
+                return "your mother is a whore";
+            }
+            var nodeCache = new List<ListNode>();
+            while (true)
+            {
+                if (nodeCache.Contains(baller.next))
+                {
+                    return true;
+                }
+                else if (baller.next == null)
+                {
+                    return false;
+                }
+
+                nodeCache.Add(baller);
+                baller = baller.next;
+
+            }*/
+        }
+//How to calculate factorial using recursion in C#? (Solution)
+        public static void RecursFact()
+        {
+
+        }
+        public static int[] ToIntArray(int x)
+        {
+            string p = x.ToString();
+            char[] c = p.ToCharArray();
+            int[] b = new int[c.Length];
+            for (int i = 0; i<c.Length;i++)
+            {
+                b[i] = Convert.ToInt32(c[i]);
+            }
+            return b;
+        }
+        //C# program to check if a number is Armstrong number or not? (Solution)
+        public static bool Armstrong(int x)
+        {
+            int[] Arm = ToIntArray(x);
+            int sum = 0;
+            foreach (int i in Arm)
+            {
+                sum +=(i* i *i);
+            }
+            if (sum == x)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        //Algorithm to check if a number is Prime or not? (Solution)
+        public static void Prime(int x)
+        {
+
+        }
+        //Algorithm to check if a number is Palindrome? (Solution)
+        public static void Palindrome(int x)
+        {
+
+        }
+        //Algorithm to find if Array contains duplicates? (Solution)
+        /*
+        public static void Duplicates(var[] c)
+        {
+
+        }
+        //Write code to reverse a linked list, if you able to do it using loops, try to solve with recursion? (Solution)
+        public static void Revrse(LinkedList<> x)
+        {
+
+        }
+        //How to rotate an array by a given pivot ? (Solution)
+        public static void Pivot(Array[] x)
+        {
+
+        }
+        //How to remove duplicates from a sorted linked list? (Solution)
+        public static void LinkDuplicates(LinkedList x)
+        {
+
+        }
+        */
     }
 }
-    public class ListNode {
-        public int val;
-        public ListNode next;
-        public ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
-        
-
- 
-
-       
-
