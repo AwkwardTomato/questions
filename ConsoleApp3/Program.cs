@@ -227,15 +227,28 @@ namespace ConsoleApp3
             }
             return b;
         }
-        //C# program to check if a number is Armstrong number or not? (Solution)
-        public static bool Armstrong(int x)
+        public static double[] ToDoubleArray(int x)
         {
-            int[] Arm = ToIntArray(x);
-            int sum = 0;
-            foreach (int i in Arm)
+            string p = x.ToString();
+            char[] c = p.ToCharArray();
+            double[] b = new double[c.Length];
+            for (int i = 0; i < c.Length; i++)
             {
-                sum +=(i* i *i);
+                String temp = c[i].ToString();
+                b[i] = Convert.ToDouble(temp);
             }
+            return b;
+        }
+        //C# program to check if a number is Armstrong number or not? (Solution)
+        public static bool Armstrong(double x)
+        {
+            double[] Arm = ToDoubleArray((int)x);
+            double sum = 0;
+            foreach (double i in Arm)
+            {
+                sum += Math.Pow(i, 3);
+            }
+            Console.WriteLine(sum);
             if (sum == x)
             {
                 return true;
