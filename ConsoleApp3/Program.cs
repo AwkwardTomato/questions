@@ -31,7 +31,7 @@ namespace ConsoleApp3
                     value = pee[i];
                 }
             }
-            Console.WriteLine(Armstrong(371));
+            Console.WriteLine(Armstrong(219));
         }
         public class ListNode
         {
@@ -211,7 +211,7 @@ namespace ConsoleApp3
 
             }*/
         }
-//How to calculate factorial using recursion in C#? (Solution)
+        //How to calculate factorial using recursion in C#? (Solution)
         public static void RecursFact()
         {
 
@@ -221,7 +221,7 @@ namespace ConsoleApp3
             string p = x.ToString();
             char[] c = p.ToCharArray();
             int[] b = new int[c.Length];
-            for (int i = 0; i<c.Length;i++)
+            for (int i = 0; i < c.Length; i++)
             {
                 b[i] = Convert.ToInt32(c[i]);
             }
@@ -259,9 +259,23 @@ namespace ConsoleApp3
             }
         }
         //Algorithm to check if a number is Prime or not? (Solution)
-        public static void Prime(int x)
+        public static bool Prime(int x)
         {
-
+            int n, i, m = 0, flag = 0;
+            Console.Write("Enter the Number to check Prime: ");
+            n = int.Parse(Console.ReadLine());
+            m = n / 2;
+            for (i = 2; i <= m; i++)
+            {
+                if (n % i == 0)
+                {
+                    return false;
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0)
+                return true;
         }
         //Algorithm to check if a number is Palindrome? (Solution)
         public static void Palindrome(int x)
@@ -269,8 +283,8 @@ namespace ConsoleApp3
 
         }
         //Algorithm to find if Array contains duplicates? (Solution)
-        /*
-        public static void Duplicates(var[] c)
+        
+        /*public static void Duplicates(var[] c)
         {
 
         }
