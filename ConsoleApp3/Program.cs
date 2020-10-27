@@ -31,7 +31,7 @@ namespace ConsoleApp3
                     value = pee[i];
                 }
             }
-            Console.WriteLine(Armstrong(219));
+            Console.WriteLine(Palindrome(1234));
         }
         public class ListNode
         {
@@ -261,26 +261,47 @@ namespace ConsoleApp3
         //Algorithm to check if a number is Prime or not? (Solution)
         public static bool Prime(int x)
         {
-            int n, i, m = 0, flag = 0;
-            Console.Write("Enter the Number to check Prime: ");
-            n = int.Parse(Console.ReadLine());
-            m = n / 2;
+            int i, m = 0;
+            if (x==0)
+            {
+                Console.WriteLine("Your anoying tbh");
+                return false;
+            }
+            m = x / 2;
             for (i = 2; i <= m; i++)
             {
-                if (n % i == 0)
+                if (x % i == 0)
                 {
                     return false;
-                    flag = 1;
-                    break;
                 }
             }
-            if (flag == 0)
+
                 return true;
+
         }
         //Algorithm to check if a number is Palindrome? (Solution)
-        public static void Palindrome(int x)
+        public static bool Palindrome(int x)
         {
+            int[] pal = ToIntArray(x);
+            int[] pal2 = new int[pal.Length];
+            int b = 0;
+                for (int i = pal.Length - 1; i == 0; i--)
+                {
+                pal2[b] = pal[i];
+                b++;
+                }
+                foreach(int i in pal)
+            {
+                if(pal[i]==pal[i])
+                {
 
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
         }
         //Algorithm to find if Array contains duplicates? (Solution)
         
