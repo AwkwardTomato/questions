@@ -31,7 +31,8 @@ namespace ConsoleApp3
                     value = pee[i];
                 }
             }
-            Console.WriteLine(Palindrome(1234));
+            int[] peo = {1, 1, 2, 5, 6, 8, 9};
+            Console.WriteLine(Duplicates(peo));
         }
         public class ListNode
         {
@@ -61,12 +62,9 @@ namespace ConsoleApp3
                 {
                     return false;
                 }
-
                 nodeCache.Add(head);
                 head = head.next;
-
             }
-
         }
         static bool Apple(string a, string b)
         {
@@ -227,7 +225,7 @@ namespace ConsoleApp3
             }
             return b;
         }
-        public static double[] ToDoubleArray(int x)
+        public static double[] ToDoubleArray(double x)
         {
             string p = x.ToString();
             char[] c = p.ToCharArray();
@@ -275,26 +273,21 @@ namespace ConsoleApp3
                     return false;
                 }
             }
-
                 return true;
-
         }
         //Algorithm to check if a number is Palindrome? (Solution)
-        public static bool Palindrome(int x)
+        public static bool Palindrome(double x)
         {
-            int[] pal = ToIntArray(x);
-            int[] pal2 = new int[pal.Length];
-            int b = 0;
-                for (int i = pal.Length - 1; i == 0; i--)
-                {
-                pal2[b] = pal[i];
-                b++;
-                }
-                foreach(int i in pal)
+            double[] pal = ToDoubleArray(x);
+            double[] pal2 = new double[pal.Length];
+            foreach(double i in pal)
             {
-                if(pal[i]==pal[i])
-                {
 
+            }
+            for (int i = 0; i == pal.Length - 1; i++)
+            {
+                if(pal[i]==pal2[i])
+                {
                 }
                 else
                 {
@@ -304,16 +297,27 @@ namespace ConsoleApp3
             return true;
         }
         //Algorithm to find if Array contains duplicates? (Solution)
-        
-        /*public static void Duplicates(var[] c)
+
+        public static bool Duplicates(int[] POP)
         {
+            int i = 0;
+            for (; i == POP.Length - 1; i++)
+            {
+                if (POP[i] == POP[i + 1])
+                {
+                    return true;
+                }
+            }
+            return false;
 
         }
+        
         //Write code to reverse a linked list, if you able to do it using loops, try to solve with recursion? (Solution)
         public static void Revrse(LinkedList<> x)
         {
 
         }
+        /*
         //How to rotate an array by a given pivot ? (Solution)
         public static void Pivot(Array[] x)
         {
