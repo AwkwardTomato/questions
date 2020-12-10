@@ -309,17 +309,20 @@ namespace ConsoleApp3
                 }
             }
             return false;
-
         }
-        
         //Write code to reverse a linked list, if you able to do it using loops, try to solve with recursion? (Solution)
-        public static void Revrse(LinkedList<> x)
+        public static void Revrse(LinkedList<string> pogg)
         {
+            int x = pogg.Count;
+            if(x <= 0)
+            {
+                return pogg;
+            }
 
         }
         /*
         //How to rotate an array by a given pivot ? (Solution)
-        public static void Pivot(Array[] x)
+        public static void Pivot(Array[] x, int x)
         {
 
         }
