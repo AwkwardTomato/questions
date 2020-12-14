@@ -35,7 +35,7 @@ namespace ConsoleApp3
                 node.next = new ListNode(i);
                 node = node.next;
             }
-            Console.WriteLine(RecurseFact(13));
+            Console.WriteLine(Palindrome(1116111));
         }
         public class ListNode
         {
@@ -296,20 +296,12 @@ namespace ConsoleApp3
             return true;
         }
         //Algorithm to check if a number is Palindrome? (Solution)
-        public static bool Palindrome(double x)
+        public static bool Palindrome(int x)
         {
-            double[] pal = ToDoubleArray(x);
-            double[] pal2 = new double[pal.Length];
-            foreach (double i in pal)
+            int[] pal = ToIntArray(x);
+            for (int i = 0; i < pal.Length / 2; i++)
             {
-
-            }
-            for (int i = 0; i == pal.Length - 1; i++)
-            {
-                if (pal[i] == pal2[i])
-                {
-                }
-                else
+                if (pal[i] != pal[pal.Length - i - 1])
                 {
                     return false;
                 }
