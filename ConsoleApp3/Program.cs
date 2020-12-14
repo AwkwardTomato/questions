@@ -27,7 +27,7 @@ namespace ConsoleApp3
                     value = pee[i];
                 }
             }
-            int[] peo = {1, 1, 2, 5, 6, 8, 9};
+            int[] peo = { 1, 1, 2, 5, 6, 8, 9 };
             ListNode head = new ListNode(0);
             ListNode node = head;
             for (int i = 1; i < 14; i++)
@@ -35,7 +35,7 @@ namespace ConsoleApp3
                 node.next = new ListNode(i);
                 node = node.next;
             }
-            Console.WriteLine(ThirdFromLast(head));
+            Console.WriteLine(RecurseFact(13));
         }
         public class ListNode
         {
@@ -197,7 +197,7 @@ namespace ConsoleApp3
         {
             int[] nodeCache = new int[place];
             int i = 0;
-            for (; LST != null ; i++)
+            for (; LST != null; i++)
             {
                 nodeCache[i % place] = LST.val;
                 LST = LST.next;
@@ -225,10 +225,14 @@ namespace ConsoleApp3
             next = null;
         }
     }*/
-    //How to calculate factorial using recursion in C#? (Solution)
-        public static void RecursFact()
+        //How to calculate factorial using recursion in C#? (Solution)
+        public static uint RecurseFact(uint i)
         {
-
+            if (i == 1)
+            {
+                return 1;
+            }
+            return RecurseFact(i - 1) * i;
         }
         public static int[] ToIntArray(int x)
         {
@@ -276,7 +280,7 @@ namespace ConsoleApp3
         public static bool Prime(int x)
         {
             int i, m = 0;
-            if (x==0)
+            if (x == 0)
             {
                 Console.WriteLine("Your anoying tbh");
                 return false;
@@ -289,20 +293,20 @@ namespace ConsoleApp3
                     return false;
                 }
             }
-                return true;
+            return true;
         }
         //Algorithm to check if a number is Palindrome? (Solution)
         public static bool Palindrome(double x)
         {
             double[] pal = ToDoubleArray(x);
             double[] pal2 = new double[pal.Length];
-            foreach(double i in pal)
+            foreach (double i in pal)
             {
 
             }
             for (int i = 0; i == pal.Length - 1; i++)
             {
-                if(pal[i]==pal2[i])
+                if (pal[i] == pal2[i])
                 {
                 }
                 else
@@ -330,7 +334,7 @@ namespace ConsoleApp3
         public static void Revrse(LinkedList<string> pogg)
         {
             int x = pogg.Count;
-            if(x <= 0)
+            if (x <= 0)
             {
                 return;
             }
