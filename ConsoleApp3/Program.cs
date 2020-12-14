@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.ExceptionServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 namespace ConsoleApp3
 {
@@ -32,7 +28,14 @@ namespace ConsoleApp3
                 }
             }
             int[] peo = {1, 1, 2, 5, 6, 8, 9};
-            Console.WriteLine(Duplicates(peo));
+            ListNode head = new ListNode(0);
+            ListNode node = head;
+            for (int i = 1; i < 14; i++)
+            {
+                node.next = new ListNode(i);
+                node = node.next;
+            }
+            Console.WriteLine(ThirdFromLast(head));
         }
         public class ListNode
         {
@@ -185,31 +188,44 @@ namespace ConsoleApp3
             }
             return asdf;
         }
-        //How to find the 3rd element from end, in a singly linked, in a single pass? (Solution)
-        public static void ThirdFromLast(ListNode baller)
+        public static int ThirdFromLast(ListNode LST)
         {
-            /*if (baller == null)
-            {
-                return "your mother is a whore";
-            }
-            var nodeCache = new List<ListNode>();
-            while (true)
-            {
-                if (nodeCache.Contains(baller.next))
-                {
-                    return true;
-                }
-                else if (baller.next == null)
-                {
-                    return false;
-                }
-
-                nodeCache.Add(baller);
-                baller = baller.next;
-
-            }*/
+            return FromLast(LST, 3);
         }
-        //How to calculate factorial using recursion in C#? (Solution)
+        //How to find the 3rd element from end, in a singly linked, in a single pass? (Solution)
+        public static int FromLast(ListNode LST, int place)
+        {
+            int[] nodeCache = new int[place];
+            int i = 0;
+            for (; LST != null ; i++)
+            {
+                nodeCache[i % place] = LST.val;
+                LST = LST.next;
+            }
+            return nodeCache[i % place];
+            /*var queue = new Queue<int>();
+            while(LST != null)
+            {
+                queue.Enqueue(LST.val);
+                if(queue.Count > 3)
+                {
+                    queue.Dequeue();
+                }
+                LST = LST.next;
+            }
+            return queue.Dequeue();*/
+        }
+        /*        public class ListNode
+        {
+        public int val;
+        public ListNode next;
+        public ListNode(int x)
+        {
+            val = x;
+            next = null;
+        }
+    }*/
+    //How to calculate factorial using recursion in C#? (Solution)
         public static void RecursFact()
         {
 
@@ -316,7 +332,7 @@ namespace ConsoleApp3
             int x = pogg.Count;
             if(x <= 0)
             {
-                return pogg;
+                return;
             }
 
         }
