@@ -35,7 +35,7 @@ namespace ConsoleApp3
                 node.next = new ListNode(i);
                 node = node.next;
             }
-            Console.WriteLine(Palindrome(1116111));
+            Console.WriteLine(Duplicates(new int[] {1, 2,3}));
         }
         public class ListNode
         {
@@ -312,15 +312,27 @@ namespace ConsoleApp3
 
         public static bool Duplicates(int[] POP)
         {
+            for(int j = 0; j < POP.Length - 1; j++)
+            {
+                for (int i = j + 1; i < POP.Length; i++)
+                {
+                    if (POP[j] == POP[i])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+            /*Array.Sort(POP);
             int i = 0;
-            for (; i == POP.Length - 1; i++)
+            for (; i < POP.Length - 1; i++)
             {
                 if (POP[i] == POP[i + 1])
                 {
                     return true;
                 }
             }
-            return false;
+            return false;*/
         }
         //Write code to reverse a linked list, if you able to do it using loops, try to solve with recursion? (Solution)
         public static void Revrse(LinkedList<string> pogg)
@@ -330,7 +342,6 @@ namespace ConsoleApp3
             {
                 return;
             }
-
         }
         /*
         //How to rotate an array by a given pivot ? (Solution)
